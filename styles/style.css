@@ -298,7 +298,7 @@ ol {
   display: flex;
   flex-direction: row;
   justify-content: space-between;  
-  min-width: 100%;      
+  width: 100%;
 }
 
 .content__card-link:hover .content__video-card-title,
