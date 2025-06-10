@@ -62,16 +62,13 @@ ol {
 }
 
 .button:hover {
+  text-decoration: underline;
   cursor: pointer;
 }
 
 .button:active {
-  text-decoration: none !important;
+  text-decoration: none;
   background-color: #545050;
-}
-
-.button:hover {
-  text-decoration: underline;
 }
 
 .button:focus {
@@ -93,7 +90,7 @@ ol {
 
 .content {
   display: grid; 
-  grid-template-columns: auto 399px;
+  grid-template-columns: auto auto;
   grid-template-areas: 
   "result content__details";
   justify-content: center;
@@ -249,7 +246,6 @@ ol {
   grid-area: content__details;
   row-gap: 23px;
   width: auto;
-  height: 534px;
   margin-bottom: 80px;
 }
 
@@ -269,9 +265,10 @@ ol {
 
 .content__list-container {
   position: relative;
-  height: 100%;
   overflow-x: auto;
   overflow-y: auto;
+  min-width: 399px;
+  height: 296px;
 }
 
 .content__list {  
@@ -301,7 +298,7 @@ ol {
   display: flex;
   flex-direction: row;
   justify-content: space-between;  
-  width: 390px;    
+  min-width: 100%;      
 }
 
 .content__card-link:hover .content__video-card-title,
@@ -316,14 +313,6 @@ ol {
 
 .content__card-link:focus-visible .content__list-item {
   outline: 1px solid #fff;
-}
-
-.content__video-card {
-  width: 399px;
-}
-
-.content__video-card-description-container {
-  min-width: 198px;
 }
 
 .content__video-card-title {
